@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+
+h2{
+    padding: 20px; 
+}
+
+#generate{
+    background-color: rgb(209, 137, 89);
+    border-radius: 10px;
+    font-size: larger;
+    padding: 10px;
+    margin-top: 2em;
+    cursor: pointer;
+    
+}
+
+.button-gen{
+    text-align: center;
+}
+
+#generate:hover{
+    background-color: aqua;
+}

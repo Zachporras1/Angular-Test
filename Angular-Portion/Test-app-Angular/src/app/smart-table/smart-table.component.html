@@ -1,0 +1,13 @@
+
+
+<div class="button-gen">
+<button id="generate" type="button" (click)="isClick()">Generate Table</button>
+<h2 *ngIf="!click">Click To Generate Table </h2>
+<h2 *ngIf="click">Generated Sucessfully</h2>
+
+</div>
+
+<div *ngIf="click" >
+  <h1>My Table</h1>
+<ng2-smart-table [settings]="settings" [source]="data"></ng2-smart-table>
+</div>

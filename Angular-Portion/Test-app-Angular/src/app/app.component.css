@@ -1,0 +1,39 @@
+
+
+.navi{
+    background-color: rgb(64, 144, 197);
+    display: flex;
+    padding: 1%;
+    font-size: 200%;
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+a{
+    color:black;
+}
+
+a:active{
+    background-color: green;
+  
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    background-color: silver;
+    width: 100%;
+    padding: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.link{
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid rgb(29, 61, 57);
+}

@@ -1,0 +1,67 @@
+
+    <button class="generate" type="button" (click)="genDate()">Generate Date Pipes</button>
+    <button class="generate" type="buttom" (click)="genTime()">Generate Time Pipes</button>
+    <button class="generate" type="buttom" (click)="genString()">Generate String Pipes</button>
+
+  
+
+
+
+  <div *ngIf="dateButton" class="date">
+    <div class="header">
+        <h1>Dates Pipe</h1>
+        <p id="example">Unformatted Date And Time: {{currentdate}}</p>
+        </div>
+
+<h2>Enter Number Between 1 and 4</h2>
+ <input class="switch-input" type="text" [(ngModel)]="dateNum">
+<div class="test" *ngIf="dateNum" [ngSwitch]="dateNum">    
+  
+<div *ngSwitchCase="1">Short Date: {{currentdate|date:'shortDate'}}</div>
+<div *ngSwitchCase="2">Medium Date:{{currentdate| date:'mediumDate'}}</div>
+<div *ngSwitchCase="3">Long Date: {{currentdate|date:'longDate'}}</div>
+<div *ngSwitchCase="4">Full Date: {{currentdate| date:'fullDate'}}</div>
+ <div *ngSwitchDefault>Enter Valid Index</div>   
+
+</div>
+  </div>
+
+<div *ngIf="timeButton" class="time"> 
+    <div class="header">
+        <h1>Time Pipes</h1>
+        <p id="example">Unformatted Date And Time: {{currentdate}}</p>
+        </div>
+    
+<h2>Enter Number Between 1 and 4</h2>
+
+    <input class="switch-input" type="text" [(ngModel)]="timeNum">
+    <div class="test" *ngIf="timeNum" [ngSwitch]="timeNum">
+        <div *ngSwitchCase="1">Short Time: {{currentdate|date:'shortTime'}}</div>
+        <div *ngSwitchCase="2">Medium Time: {{currentdate|date:'mediumTime'}}</div>
+        <div *ngSwitchCase="3">Long Time: {{currentdate|date:'longTime'}}</div>
+        <div *ngSwitchCase="4">Full Time: {{currentdate|date:'fullTime'}}</div>
+        <div *ngSwitchDefault>Enter Valid Index</div> 
+
+    </div>
+</div >
+
+<div class="string" *ngIf="stringButton">
+<h1>String Pipes</h1>
+
+<h3>Unformatted String: {{testString}}</h3>
+
+<h2 id="string-head">Enter Number between 1 and 3 </h2>
+
+<input class="switch-input" type="text" [(ngModel)]="stringNum">
+<div class="text" *ngIf="stringNum" [ngSwitch]="stringNum" >
+<div *ngSwitchCase="1" > String UpperCase: {{testString|uppercase}}</div>
+<div *ngSwitchCase="2" >String LowerCase: {{testString|lowercase}}</div>
+<div *ngSwitchCase="3" >String TitleCase: {{testString|titlecase}}</div>
+<div *ngSwitchDefault>Enter Valid Index</div> 
+
+</div>
+
+
+</div>
+
+

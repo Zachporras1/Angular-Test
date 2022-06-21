@@ -1,0 +1,34 @@
+
+
+<div>
+    <table class="table" >
+        <tr>
+            <th>Index</th>
+        <th>Title</th>
+        <th>Release Year</th>
+        <th>Genre</th>
+        </tr>
+        <tr *ngFor="let films of Movie; let i=index; let e = even; let o=odd;"[ngClass]="{even:e, odd:o}">
+           <td>{{i}}</td>
+            <td>{{films.title}}</td>
+            <td>{{films.releaseyear}}</td>
+            <td>{{films.genre|titlecase}}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="switch">
+<p>Enter Index: </p>    
+<input class="number-entry" type="text" [(ngModel)]="num">
+    </div>
+
+<div class="titles" *ngIf="num" [ngSwitch]="num" >
+    <div *ngSwitchCase="0">Title: {{Movie[0].title|titlecase}}</div>
+    <div *ngSwitchCase="1"> Title: {{Movie[1].title|titlecase}} </div>
+    <div *ngSwitchCase="2">Title: {{Movie[2].title|titlecase}}</div>
+    <div *ngSwitchCase="3">Title: {{Movie[3].title|titlecase}}</div>
+    <div id="error" *ngSwitchDefault>{{error}}</div>
+    
+
+
+</div>
