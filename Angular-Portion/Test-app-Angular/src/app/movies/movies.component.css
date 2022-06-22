@@ -1,9 +1,19 @@
-.even{
+.movie-data.even{
 
     background-color: red;
 }
-.odd{
+.movie-data.odd{
     background-color: aqua;
+}
+
+
+.show-data.even{
+
+    background-color: rgb(73, 73, 190);
+}
+
+.show-data.odd{
+    background-color: rgb(90, 173, 87);
 }
 
 .table{
@@ -15,6 +25,7 @@
    
     border-radius: 20px;
     padding: 10px;
+    border-collapse: collapse;
 }
 
 .number-entry{
@@ -57,4 +68,5 @@ h1{
 
 th{
     text-decoration: underline;
+   
 }
