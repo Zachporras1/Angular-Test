@@ -13,6 +13,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { TitleComponent } from './title/title.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieListService } from './movie-list.service';
+import { TvShowsService } from './tv-shows.service';
 
 @NgModule({
   declarations: [

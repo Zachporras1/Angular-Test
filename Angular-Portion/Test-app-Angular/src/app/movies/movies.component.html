@@ -1,34 +1,77 @@
+<h1>Data generated from Java using Springboot</h1>
 
+<button type="button" (click)="genMovieTable()">Generate Movie Table</button>
+<button type="button" (click)="genShowTable()">Generate TV Show Table</button>
 
-<div>
-    <table class="table" >
-        <tr>
-            <th>Index</th>
+<div *ngIf="movieButton" class="movies-table">
+  <div>
+    <table class="table">
+      <tr>
+        <th>Index</th>
         <th>Title</th>
         <th>Release Year</th>
         <th>Genre</th>
-        </tr>
-        <tr *ngFor="let films of Movie; let i=index; let e = even; let o=odd;"[ngClass]="{even:e, odd:o}">
-           <td>{{i}}</td>
-            <td>{{films.title}}</td>
-            <td>{{films.releaseyear}}</td>
-            <td>{{films.genre|titlecase}}</td>
-        </tr>
+      </tr>
+      <tr
+        *ngFor="let films of Movie; let i = index; let e = even; let o = odd"
+        [ngClass]="{ even: e, odd: o }"
+      >
+        <td>{{ i }}</td>
+        <td>{{ films.title }}</td>
+        <td>{{ films.releaseyear }}</td>
+        <td>{{ films.genre | titlecase }}</td>
+      </tr>
     </table>
+  </div>
+
+  <div class="switch">
+    <p>Enter Index:</p>
+    <input class="number-entry" type="text" [(ngModel)]="num" />
+  </div>
+
+  <div class="titles" *ngIf="num" [ngSwitch]="num">
+    <div *ngSwitchCase="0">Title: {{ Movie[0].title | titlecase }}</div>
+    <div *ngSwitchCase="1">Title: {{ Movie[1].title | titlecase }}</div>
+    <div *ngSwitchCase="2">Title: {{ Movie[2].title | titlecase }}</div>
+    <div *ngSwitchCase="3">Title: {{ Movie[3].title | titlecase }}</div>
+    <div id="error" *ngSwitchDefault>{{ error }}</div>
+  </div>
 </div>
 
-<div class="switch">
-<p>Enter Index: </p>    
-<input class="number-entry" type="text" [(ngModel)]="num">
-    </div>
+<div *ngIf="showsButton" class="shows-table">
+  <div>
+    <table class="table">
+      <tr>
+        <th>Index</th>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Network</th>
+        <th>Seasons</th>
+      </tr>
+      <tr
+        *ngFor="let tv of tvShows; let i = index; let e = even; let o = odd"
+        [ngClass]="{ even: e, odd: o }"
+      >
+        <td>{{ i }}</td>
+        <td>{{ tv.title }}</td>
+        <td>{{ tv.genre }}</td>
+        <td>{{ tv.network | titlecase }}</td>
+        <td>{{ tv.seasons }}</td>
+      </tr>
+    </table>
+  </div>
 
-<div class="titles" *ngIf="num" [ngSwitch]="num" >
-    <div *ngSwitchCase="0">Title: {{Movie[0].title|titlecase}}</div>
-    <div *ngSwitchCase="1"> Title: {{Movie[1].title|titlecase}} </div>
-    <div *ngSwitchCase="2">Title: {{Movie[2].title|titlecase}}</div>
-    <div *ngSwitchCase="3">Title: {{Movie[3].title|titlecase}}</div>
-    <div id="error" *ngSwitchDefault>{{error}}</div>
-    
+  <div class="switch">
+    <p>Enter Index:</p>
+    <input class="number-entry" type="text" [(ngModel)]="shownum" />
+  </div>
 
-
+  <div class="titles" *ngIf="shownum" [ngSwitch]="shownum">
+    <div *ngSwitchCase="0">Title: {{ tvShows[0].title | titlecase }}</div>
+    <div *ngSwitchCase="1">Title: {{ tvShows[1].title | titlecase }}</div>
+    <div *ngSwitchCase="2">Title: {{ tvShows[2].title | titlecase }}</div>
+    <div *ngSwitchCase="3">Title: {{ tvShows[3].title | titlecase }}</div>
+    <div *ngSwitchCase="4">Title: {{ tvShows[4].title | titlecase }}</div>
+    <div id="error" *ngSwitchDefault>{{ error }}</div>
+  </div>
 </div>
