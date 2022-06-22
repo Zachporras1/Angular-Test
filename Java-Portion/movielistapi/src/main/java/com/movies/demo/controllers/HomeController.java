@@ -17,6 +17,7 @@ public class HomeController {
 
     public List<Movies> getMovies(Model model){
 
+        int a=0;
         List <Movies> movieList= new ArrayList<Movies>();
         movieList.add(new Movies("Avengers 2","2015","SuperHero"));
         movieList.add(new Movies("This is the end","2012","Comedy"));
