@@ -1,51 +1,84 @@
-.even{
-
-    background-color: red;
+.movie-data.even {
+  background-color: red;
 }
-.odd{
-    background-color: aqua;
+.movie-data.odd {
+  background-color: aqua;
 }
 
-.table{
-    border: 1px solid green;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5%;
-   
+.show-data.even {
+  background-color: rgb(73, 73, 190);
+}
+
+.show-data.odd {
+  background-color: rgb(90, 173, 87);
+}
+
+.table {
+  border: 1px solid green;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+
+  border-radius: 20px;
+  padding: 10px;
+  border-collapse: collapse;
+}
+
+.number-entry {
+  border-radius: 10px;
+  height: 20px;
+}
+
+.switch {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+}
+p {
+  margin-right: 1%;
+}
+
+.titles {
+  text-align: center;
+}
+
+* {
+  font-size: larger;
+}
+
+#error {
+  color: red;
+  font-weight: bold;
+
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+  font-size: 250%;
+  color: rgb(172, 109, 27);
+  text-decoration: underline;
+  font-style: italic;
+}
+
+th {
+  text-decoration: underline;
+}
+
+td {
+  border: solid 1px black;
+  padding: 10px;
+}
+
+button{
+    border: 1px solid rgb(167, 192, 167);
     border-radius: 20px;
+    background-color: blue;
+    color: white;
     padding: 10px;
 }
 
-.number-entry{
-    border-radius: 10px;
-    height: 20px;
-
-}
-
-.switch{
-
- display: flex;
- justify-content: center;
- padding-top: 5%;
-
-}
-p{
-    margin-right: 1%;
-}
-
-.titles{
-    text-align: center;
-}
-
-*{
- font-size: larger;
-    
-}
-
-#error{
-    color: red;
-    font-weight: bold;
-   
-    text-decoration: underline;
+button:active{
+    background-color: red;
 }
